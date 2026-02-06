@@ -1,20 +1,18 @@
-import { LightningElement,wire } from 'lwc';
-import { CurrentPageReference } from 'lightning/navigation';
-export default class ValentineProposal extends LightningElement {
-    opened = false;
-    sheSaidYes = false;
-    name = 'Ruchi';
-    
-    openEnvelope() {
-        this.opened = true;
-    }
-     @wire(CurrentPageReference)
-    getPageReference(pageRef) {
-        if (pageRef && pageRef.state && pageRef.state.name) {
-            this.name = decodeURIComponent(pageRef.state.name);
-        }
-    }
-    handleYes() {
-        this.sheSaidYes = true;
-    }
+const envelope = document.getElementById("envelope");
+const letter = document.getElementById("letter");
+const celebration = document.getElementById("celebration");
+const yesBtn = document.getElementById("yesBtn");
+const yesBtn2 = document.getElementById("yesBtn2");
+
+envelope.addEventListener("click", () => {
+    envelope.style.display = "none";
+    letter.style.display = "block";
+});
+
+function sayYes() {
+    letter.style.display = "none";
+    celebration.style.display = "block";
 }
+
+yesBtn.addEventListener("click", sayYes);
+yesBtn2.addEventListener("click", sayYes);

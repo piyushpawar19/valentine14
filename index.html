@@ -2,73 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine for Ruchi ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<template>
-    <div class="container">
+<div class="container">
 
-        <!-- ENVELOPE -->
-        <template if:false={opened}>
-            <div class="envelope" onclick={openEnvelope}>
-                <div class="heart">❤️</div>
-                <p class="tap-text">Tap to open</p>
-            </div>
-        </template>
-
-        <!-- LETTER -->
-        <template if:true={opened}>
-            <template if:false={sheSaidYes}>
-                <div class="letter">
-                    <p class="line greeting">Hey Ruchi,</p>
-
-                    <p class="line">
-                       Hamari baaton aur chhoti-chhoti nokjhok aur hasi ke beech hi kahin,
-                       tu chupke se mere poore din ka favourite hissa ban gayi
-                    </p>
-
-                    <p class="line">
-                        Life thodi si zyada hi warm, happy,
-                        aur better lagne lagi hai jab se tu meri life me aayi hai.” 🤍
-                    </p>
-
-                    <h2 class="question">
-                        Will you be my Valentine? 💖
-                    </h2>
-
-                    <div class="actions">
-                        <button class="yes" onclick={handleYes}>Yes 💕</button>
-                        <button class="shy" onclick={handleYes}>Blushing already 😊</button>
-                    </div>
-                </div>
-            </template>
-
-            <!-- CELEBRATION -->
-            <template if:true={sheSaidYes}>
-                <div class="celebration">
-                    <h1>She said YES 💘</h1>
-                    <p class="subtext">
-                        And my heart is officially very happy 🥰
-                    </p>
-
-                    <div class="gif-grid">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2JjZTZhcjB5cW5rOTN4aHJ5b2cxZXNpODdpZDl6dHN5N21penowcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MDJ9IbxxvDUQM/giphy.gif" />
-                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeThqOHVqbjN2MzlxNTZ6YTJsaW95Njk3aHJpc2JvYWJkdmQzMTgyMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/azi3GTPtxWKCQ/giphy.gif" />
-                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmpycXdlbjB0NGdhaDk3c3Z6bmYwYjBobDBmdTNjYngxMm1uazhnaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n9HfdJCqnh01e99KtB/giphy.gif" />
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2JjZTZhcjB5cW5rOTN4aHJ5b2cxZXNpODdpZDl6dHN5N21penowcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1JmGiBtqTuehfYxuy9/giphy.gif" />
-                    </div>
-
-                    <h2 class="final-line">
-                        Happy Valentine’s Day, Ruchi❤️
-                    </h2>
-                </div>
-            </template>
-        </template>
-
+    <!-- ENVELOPE -->
+    <div class="envelope" id="envelope">
+        <div class="heart">❤️</div>
+        <p class="tap-text">Tap to open</p>
     </div>
-</template>
 
+    <!-- LETTER -->
+    <div class="letter" id="letter" style="display:none;">
+        <p class="line greeting">Hey Ruchi,</p>
+
+        <p class="line">
+            Hamari baaton aur chhoti-chhoti nokjhok aur hasi ke beech hi kahin,
+            tu chupke se mere poore din ka favourite hissa ban gayi
+        </p>
+
+        <p class="line">
+            Life thodi si zyada hi warm, happy,
+            aur better lagne lagi hai jab se tu meri life me aayi hai 🤍
+        </p>
+
+        <h2 class="question">Will you be my Valentine? 💖</h2>
+
+        <div class="actions">
+            <button class="yes" id="yesBtn">Yes 💕</button>
+            <button class="shy" id="yesBtn2">Blushing already 😊</button>
+        </div>
+    </div>
+
+    <!-- CELEBRATION -->
+    <div class="celebration" id="celebration" style="display:none;">
+        <h1>She said YES 💘</h1>
+        <p class="subtext">And my heart is officially very happy 🥰</p>
+
+        <div class="gif-grid">
+            <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+            <img src="https://media.giphy.com/media/azi3GTPtxWKCQ/giphy.gif">
+            <img src="https://media.giphy.com/media/n9HfdJCqnh01e99KtB/giphy.gif">
+            <img src="https://media.giphy.com/media/1JmGiBtqTuehfYxuy9/giphy.gif">
+        </div>
+
+        <h2 class="final-line">Happy Valentine’s Day, Ruchi ❤️</h2>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
