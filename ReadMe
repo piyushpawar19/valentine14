@@ -9,10 +9,6 @@ All you need is a URL and a name.
 
 The proposal page reads a name from the URL and automatically personalizes the message.
 
-Example:
-
-https://d2v000002izavea4-dev-ed.my.site.com/valentine/proposal?name=her
-
 
 The page will display:
 

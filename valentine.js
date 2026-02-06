@@ -3,7 +3,8 @@ import { CurrentPageReference } from 'lightning/navigation';
 export default class ValentineProposal extends LightningElement {
     opened = false;
     sheSaidYes = false;
-    name = 'Saniya';
+    name = 'Ruchi';
+    
     openEnvelope() {
         this.opened = true;
     }
